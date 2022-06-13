@@ -9,7 +9,6 @@ import seaborn as sns
 import nltk
 from nltk.corpus import stopwords  # Remove useless words
 from sklearn.feature_extraction.text import CountVectorizer, TfidfVectorizer
-from nltk.corpus import stopwords  # Remove useless words
 from nltk.stem.lancaster import LancasterStemmer  # Convert words to base form; aggressive
 from nltk.stem import WordNetLemmatizer
 from nltk.corpus import wordnet

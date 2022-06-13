@@ -19,7 +19,7 @@ def MessageHelper(message) -> dict:
 
 class CreateMessageDTO(BaseModel):
   msg: str
-  sender: PyObjectId
+  sender: PyObjectId = Field(default=PyObjectId())
   isToxic: bool = Field(default=False)
   def __getitem__(self, item):
     return getattr(self, item)
@@ -27,3 +27,13 @@ class CreateMessageDTO(BaseModel):
   def __setitem__(self,item,value):
     #explicitly defined __setitem__
     setattr(self, item, value)
+
+class CreateMessageHeadersDTO(BaseModel):
+  auth: str
+  def __getitem__(self, item):
+    return getattr(self, item)
+
+  def __setitem__(self,item,value):
+    #explicitly defined __setitem__
+    setattr(self, item, value)
+
